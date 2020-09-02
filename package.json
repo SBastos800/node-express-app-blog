@@ -1,0 +1,23 @@
+{
+  "name": "express-app-blog",
+  "version": "1.0.0",
+  "description": "node app - blog ",
+  "main": "\u001b[D\u001b[D\u001b[D\u001bapp\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SBastos800/node-express-app-blog.git"
+  },
+  "author": "Sonia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SBastos800/node-express-app-blog/issues"
+  },
+  "homepage": "https://github.com/SBastos800/node-express-app-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
