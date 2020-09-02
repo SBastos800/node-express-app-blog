@@ -7,6 +7,9 @@ app.set('view engine', 'ejs');
 
 app.listen(3000);
 
+//static files
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
     const blogs = [
         {title: 'spaghetti bolognese recipe', snippet:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, necessitatibus non. Dolorem, eius tempore. Obcaecati, sint. Iste aut harum quos ratione perferendis ea soluta quo sit quidem accusantium, commodi ducimus.'},

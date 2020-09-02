@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #272727;
+    color: whitesmoke;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+nav a  {
+    text-decoration: none;
+}
+
+/* nav .site-title {
+    display: flex;
+    align-items: flex-start;
+    /* max-width: 400px; */
+/* } */ 
+
+/* nav h1  {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+} */
+
