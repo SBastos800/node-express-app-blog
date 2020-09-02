@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Blog Kitchen | <%= title %></title>
 </head>
 <body>
-    <h1>Hello I'm the index page</h1>
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>Blog Kitchen</h1></a>
+            <p>This is your favourite blog to share your recipes of the most amazing dishes!</p>
+        </div>
+        <ul>
+            <li>
+                <a href="/">Blogs</a>
+                <a href="/about">About</a>
+                <a href="/blogs/create">New Blog</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="blogs content">
+        <h2>All Blogs</h2>
+
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <h3 class="title"><%= blog.title %></h3>
+                <p class="snippet"><%= blog.snippet %></p>
+
+           <% }) %>
+    <% } else { %>
+        <p>There are no blogs to display...</p>
+   <% } %>
+    </div>
 </body>
 </html>

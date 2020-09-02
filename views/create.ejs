@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Kitchen | <%= title %></title>
+</head>
+<body>
+    <nav>
+        <div class="site-title">
+            <a href="/"><h1>Blog Kitchen</h1></a>
+            <p>This is your favourite blog to share your recipes of the most amazing dishes!</p>
+        </div>
+        <ul>
+            <li>
+                <a href="/">Blogs</a>
+                <a href="/about">About</a>
+                <a href="/blogs/create">New Blog</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="create-blog content">
+        <form action="">
+            <label for="title">Blog Title:</label>
+            <input type="text" name="" id="title" required>
+            <label for="snippet">Blog Snippet:</label>
+            <input type="text" name="" id="snipped" required>
+            <label for="body">Blog Body:</label>
+            <textarea name="" id="body" cols="30" rows="10" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>
