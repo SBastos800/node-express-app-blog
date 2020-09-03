@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to Mongo DB
-const dbURI = 'mongodb+srv://Blog-Kitchen:KitchenPractice2020@cluster0.yyidb.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://Blog-Kitchen:KitchenPractice2020@cluster0.yyidb.mongodb.net/Blog-Kitchen?retryWrites=true&w=majority';
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => app.listen(3000))
