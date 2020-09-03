@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const Blog = require('./models/blog');
 
 const app = express();
 
@@ -16,6 +17,44 @@ app.set('view engine', 'ejs');
 
 //static files
 app.use(express.static('public'));
+
+//mongoose and mongo sandbox routes
+app.get('/add-blog', (req, res) => {
+    const blog = new Blog({
+        title: 'My new Blog',
+        snippet: 'About my new blog',
+        body: 'Hello, this is my new blog about the most amazing recipe for friday night'
+    })
+
+    blog.save()
+        .then((result) => {
+            res.send(result)
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+            
+});
+
+app.get('/all-blogs', (req, res) => {
+    Blog.find()
+        .then((result) =>{
+            res.send(result);
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+})
+
+app.get('/single-blog', (req, res) => {
+    Blog.findById('5f512845a383a4225434336b')
+        .then((result) =>{
+            res.send(result);
+        })
+        .catch((err) =>{
+            console.log(err);
+        })
+})
 
 app.get('/', (req, res) => {
     const blogs = [
