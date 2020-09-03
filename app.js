@@ -18,56 +18,24 @@ app.set('view engine', 'ejs');
 //static files
 app.use(express.static('public'));
 
-//mongoose and mongo sandbox routes
-app.get('/add-blog', (req, res) => {
-    const blog = new Blog({
-        title: 'My new Blog',
-        snippet: 'About my new blog',
-        body: 'Hello, this is my new blog about the most amazing recipe for friday night'
-    })
-
-    blog.save()
-        .then((result) => {
-            res.send(result)
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-            
-});
-
-app.get('/all-blogs', (req, res) => {
-    Blog.find()
-        .then((result) =>{
-            res.send(result);
-        })
-        .catch((err) =>{
-            console.log(err);
-        })
-})
-
-app.get('/single-blog', (req, res) => {
-    Blog.findById('5f512845a383a4225434336b')
-        .then((result) =>{
-            res.send(result);
-        })
-        .catch((err) =>{
-            console.log(err);
-        })
-})
 
 app.get('/', (req, res) => {
-    const blogs = [
-        {title: 'spaghetti bolognese recipe', snippet:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, necessitatibus non. Dolorem, eius tempore. Obcaecati, sint. Iste aut harum quos ratione perferendis ea soluta quo sit quidem accusantium, commodi ducimus.'},
-        {title: 'a quick and delicious dinner', snippet:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, necessitatibus non. Dolorem, eius tempore. Obcaecati, sint. Iste aut harum quos ratione perferendis ea soluta quo sit quidem accusantium, commodi ducimus.'},
-        {title: 'a veggie recipe to start the week', snippet:'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, necessitatibus non. Dolorem, eius tempore. Obcaecati, sint. Iste aut harum quos ratione perferendis ea soluta quo sit quidem accusantium, commodi ducimus.'}
-    ];
-    res.render('index', {title: 'Home', blogs: blogs});
+   res.redirect('/blogs');
 });
 
 app.get('/about', (req, res) => {
     res.render('about', {title: 'About'});
 });
+
+app.get('/blogs', (req, res) => {
+    Blog.find().sort({createdAt: -1})
+        .then((result) => {
+            res.render('index', { title: 'All blogs', blogs: result})
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+})
 
 app.get('/blogs/create', (req, res) => {
     res.render('create', {title: 'Create a new blog'});
