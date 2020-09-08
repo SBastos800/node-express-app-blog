@@ -63,7 +63,18 @@ app.get('/blogs/:id([0-9a-f]{24})', (req, res) => {
         .catch(err => {
             console.log(err);
         });
+})
 
+app.delete('/blogs/:id([0-9a-f]{24})', (req, res) => {
+    const id = req.params.id;
+
+    Blog.findByIdAndDelete(id)
+        .then(result => {
+            res.json({redirect: '/blogs'});
+        })
+        .catch(err => {
+            console.log(err);
+        })
 })
 
 app.get('/blogs/create', (req, res) => {
