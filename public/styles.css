@@ -7,6 +7,11 @@
     color: whitesmoke; */
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 /* Navbar  */
 
 nav {
@@ -85,6 +90,46 @@ nav a  {
 .about p {
     padding-left: 20px;
     line-height: 2em;
+}
+
+/* New Blog */
+
+.create-blog {
+    border: 2px solid blue;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-blog form {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+}
+
+label {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+input {
+    height: 45px;
+}
+
+textarea {
+    height: 120px;
+}
+
+button {
+    font-size: 20px;
+    background-color: #5f9da8;
+    color: whitesmoke;
+    padding: 15px;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
 
