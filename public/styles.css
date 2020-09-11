@@ -7,16 +7,12 @@
     color: whitesmoke; */
 }
 
-
-.introduction {
-    padding: 20px 0 30px 20px;
-}
+/* Navbar  */
 
 nav {
     display: flex;
     justify-content: space-between;
-    background-color:#5f9da8;
-   
+    background-color:#5f9da8;  
 }
 
 nav .site-title h1 {
@@ -46,15 +42,41 @@ nav a  {
     text-decoration: none;
 }
 
-/* nav .site-title {
-    display: flex;
-    align-items: flex-start;
-    /* max-width: 400px; */
-/* } */ 
+/* Welcome introduction */
 
-/* nav h1  {
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-start;
-} */
+.introduction {
+    padding: 30px 0 30px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* All Blogs */
+
+.blogs {
+    padding: 10px 20px;
+}
+
+.blogs h2 {
+    font-size: 60px;
+}
+
+ .blogs a {
+    text-decoration: none;
+}
+
+.blogs a .title {
+    color: #5f9da8;
+    padding: 20px 0;
+    font-weight: bolder;
+}
+
+.blogs a .snippet {
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+
+
 
