@@ -2,13 +2,27 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #272727;
-    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: #272727;
+    color: whitesmoke; */
+}
+
+
+.introduction {
+    padding: 20px 0 30px 20px;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
+    background-color:#5f9da8;
+   
+}
+
+nav .site-title h1 {
+    padding: 10px 20px;
+    font-size: 35px;
+    color: #faf0f1;
 }
 
 nav ul {
@@ -23,6 +37,9 @@ nav li {
 
 nav li a {
     text-decoration: none;
+    padding: 0 20px 0 15px;
+    color: aliceblue;
+    font-size: 20px;
 }
 
 nav a  {
